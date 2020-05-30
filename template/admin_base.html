@@ -19,7 +19,7 @@
     <div class="row">
         <div class="col-md-10 mx-auto p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a class="navbar-brand" href="#">News</a>
+                <a class="navbar-brand" href="{% url 'state' %}">News</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -53,13 +53,13 @@
                       TREE
                     </a>
                       <div class="dropdown-menu  " aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="#"   >STATE</a>
-                      <a class="dropdown-item" href="#"   >DISTRICT</a>
-                      <a class="dropdown-item" href="#"   >PUBLICATION HOUSE</a>
+                      <a class="dropdown-item" href="{% url 'state' %}"   >STATE</a>
+                      <a class="dropdown-item" href="{% url 'district' %}"   >DISTRICT</a>
+                      <a class="dropdown-item" href="{% url 'company' %}"   >PUBLICATION HOUSE</a>
                       </div>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link" style="color: white;">PUBLISH NEWSPAPER</a> 
+                        <a href="{% url 'publish_newspaper'%}" class="nav-link" style="color: white;">PUBLISH NEWSPAPER</a> 
 
                     </li>
                     <li class="nav-item dropdown  ">
@@ -67,13 +67,13 @@
                         MAGAZINE
                       </a>
                         <div class="dropdown-menu  " aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#"   >MAGAZINE CATEGORY</a>
-                        <a class="dropdown-item" href="#"   >SUNDAY MAGZINE</a>
-                        <a class="dropdown-item" href="#"   >MAGZINE</a>
+                        <a class="dropdown-item" href="{% url 'magzine_catagory'%}"   >MAGAZINE CATEGORY</a>
+                        <a class="dropdown-item" href="{%url 'sunday_magzine'%}"   >SUNDAY MAGZINE</a>
+                        <a class="dropdown-item" href="{% url 'magzine' %}"   >MAGZINE</a>
                         </div>
                       </li>
                       <li class="nav-item">
-                        <a href="" class="nav-link" style="color: white;">HEADLINE</a> 
+                        <a href="{%url 'headline'%}" class="nav-link" style="color: white;">HEADLINE</a> 
 
                     </li>
                   </ul>

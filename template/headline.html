@@ -3,7 +3,7 @@
 
 {% block admin_base %}
 <div class="col-md-10 mx-auto mt-5 shadow shadow-lg py-3">
-    <span> <a href="" class="text-dark">Home/</a> </span><span><a class="text-dark" href="">Publication House/</a></span><span> <a class="text-dark" href="">List</a></span>
+    <span> <a href="" class="text-dark">Home/</a> </span><span><a class="text-dark" href="">Headline/</a></span><span> <a class="text-dark" href="">List</a></span>
 
 </div>
 <div class="col-md-10 card mx-auto mt-5 shadow shadow-lg">
@@ -16,9 +16,9 @@
             
             
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 py-3">
                     <div class="container">
-                        <table class="table table-fluid" id="myTable">
+                        <table class="table table-fluid  id="myTable">
                         <thead>
                         <tr><th>Sr.num</th>
                             <th>Headline</th>
@@ -94,9 +94,5 @@
         
     
     </div>
-    <script>
-        $(document).ready( function () {
-        $('#myTable').DataTable();
-    } );
-        </script>
+
 {%endblock%}
