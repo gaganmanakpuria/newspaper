@@ -1,11 +1,6 @@
 {% extends 'admin_base.html' %}
 {%load static%}
-{% block head %}
-<link href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css" rel="stylesheet">
 
-<script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
-<script src="https://unpkg.com/bootstrap-table@1.16.0/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
-{%endblock%}
 {% block admin_base %}
 <div class="col-md-10 mx-auto mt-5 shadow shadow-lg py-3">
     <span> <a href="" class="text-dark">Home/</a> </span><span><a class="text-dark" href="">Publish newsapaper/</a></span><span> <a class="text-dark" href="">List</a></span>
@@ -77,8 +72,8 @@
                         <tr><th>Sr.num</th>
                             <th>Name</th>
                             <th data-field="id" >Download</th>
-                            <th  data-field="state" data-filter-control="select">Publication House</th>
-                            <th data-field="Date" data-filter-control="select">Date/Time</th>
+                            <th  >Publication House</th>
+                            <th >Date/Time</th>
                             <th>Status</th>
                             <th>Action</th>
                         </tr>
@@ -169,9 +164,5 @@
         $('#myTable').DataTable();
     } );
         </script>
-        <script>
-            $(function() {
-              $('#myTable').bootstrapTable()
-            })
-          </script>
+        
 {%endblock%}
