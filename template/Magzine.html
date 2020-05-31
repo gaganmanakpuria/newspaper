@@ -72,11 +72,11 @@
             <div class="container">
                 <div class=" row mb-5">
                     <div class="col-md-5">
-                        <input type="date" class="form-control">
+                        <input type="date" id="filter" class="form-control">
     
                     </div>
                     <div class="col-md-1">
-                        <i class="fa fa-search btn card form-control"></i>
+                        <i onclick="a()" id="fi" class="fa fa-search btn card form-control"></i>
 
                     </div>
                     <div class="col-md-2 ml-auto">
@@ -89,9 +89,8 @@
             
             
             <div class="row">
-                <div class="col-md-12">
-                    <div class="container">
-                        <table class="table table-fluid" id="myTable">
+                <div class="col-md-12 ">
+                    <table class="table table-fluid table-responsive" id="myTable">
                         <thead>
                         <tr><th>Sr.num</th>
                             <th>Name</th>
@@ -102,12 +101,12 @@
                             <th>Actions</th>
                         </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="searchable">
                         <tr><td>1</td>
                             <td>Kanada</td>
                             <td><img height="50" width="50" src="https://images.unsplash.com/photo-1588774069410-84ae30757c8e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=375&q=80" alt=""></td>
                             <td> Professional image</td>
-                            <td>12may2020</td>
+                            <td>2020-05-12</td>
                             <td><span class="bg-success text-white px-3 rounded py-1">Active</span></td>
                             <td><span> <h4><a href="" data-toggle="modal" data-target="#exampleModal1"><i class="far fa-edit"></i></a></span>
                                 <span> <a href=""data-toggle="modal" data-target="#exampleModald"><i class="fa fa-trash"></i></a></h4></span></h4></td>
@@ -117,7 +116,6 @@
                         
                         </tbody>
                         </table>
-                    </div>
                 </div>
             </div>
     
@@ -224,5 +222,27 @@
         $(document).ready( function () {
         $('#myTable').DataTable();
     } );
+        </script>
+        <script>
+            $(document).ready(function () {
+
+ 
+(function ($) {
+
+    $('#fi').click(function a() {
+
+        var a = $('#filter').val();
+        var rex = new RegExp(String(a))
+        alert(rex);
+        $('.searchable tr').hide();
+        $('.searchable tr').filter(function () {
+            return rex.test($(this).text());
+        }).show();
+
+    })
+
+}(jQuery));
+a();
+});
         </script>
 {%endblock%}
